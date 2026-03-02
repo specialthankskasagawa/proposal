@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>収支管理アプリ</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
+    input, button { padding: 8px; margin: 4px; }
+    .income { color: green; }
+    .expense { color: red; }
+  </style>
+</head>
+<body>
 
+  <h1>収支管理アプリ</h1>
+
+  <div>
+    <input id="desc" placeholder="内容">
+    <input id="amount" type="number" placeholder="金額">
+    <select id="type">
+      <option value="income">収入</option>
+      <option value="expense">支出</option>
+    </select>
+    <button onclick="addEntry()">追加</button>
+  </div>
+
+  <h2>一覧</h2>
+  <ul id="list"></ul>
+
+  <h2>合計: <span id="total">0</span> 円</h2>
+
+  <script src="app.js"></script>
+</body>
+</html>
